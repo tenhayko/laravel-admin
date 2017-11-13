@@ -95,5 +95,41 @@ class AdminController extends Controller
                 return view('admin.ui.general_elements');
                 break;
         }
+    }    
+
+    public function table($id=null)
+    {
+         switch ($id) {
+            case 'tables_dynamic':
+                return view('admin.table.tables_dynamic');
+                break;
+            default:
+                return view('admin.table.table');
+                break;
+        }
+    }    
+
+    public function chart($id=null)
+    {
+         switch ($id) {
+            case 'chartjs':
+                return view('admin.chart.chartjs');
+                break;
+            case 'chartjs2':
+                return view('admin.chart.chartjs2');
+                break;            
+            case 'morisjs':
+                return view('admin.chart.morisjs');
+                break;            
+            case 'echarts':
+                return view('admin.chart.echarts');
+                break;            
+            case 'other_charts':
+                return view('admin.chart.other_charts');
+                break;
+            default:
+                return view('admin.chart.chartjs');
+                break;
+        }
     }
 }

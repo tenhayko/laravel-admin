@@ -51,6 +51,8 @@ Route::prefix('admin')->group(function(){
 	Route::get('/dashboard/{id}', 'Admin\AdminController@dashboard')->name('admin.dashboard');
 	Route::get('/form/{id?}', 'Admin\AdminController@form')->name('admin.form');
 	Route::get('/ui-element/{id?}', 'Admin\AdminController@uiElements')->name('admin.ui.element');
+	Route::get('/table/{id?}', 'Admin\AdminController@table')->name('admin.table');
+	Route::get('/chart/{id?}', 'Admin\AdminController@chart')->name('admin.chart');
 	//Route login
 	Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
